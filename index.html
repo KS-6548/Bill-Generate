@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Genrate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <table cellspacing="15px">
+            <tr>
+                <td colspan="3"><label for="">BILL NO</label></td>
+                <td colspan="3"><input type="number" id="billno"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">PRODUCT</label></td>
+                <td colspan="3"><input list="datalist" type="datalist" id="product"></td>
+                <datalist id="datalist">
+                    <option value="Milk"></option>
+                    <option value="Coffie powder"></option>
+                    <option value="Cocolate"></option>
+                    <option value="Biscuit"></option>
+                    <option value="Rice"></option>
+                    <option value="Washing Soap"></option>
+                    <option value="Suger"></option>
+
+                </datalist>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">QUANTITY</label></td>
+                <td colspan="3"><input type="number" id="quantity"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">PREPRIZE</label></td>
+                <td colspan="3"><input type="number" id="preprize"></td>
+            </tr>
+            <tr>
+                <td><button id="reset">NEW BILL</button></td>
+                <td><button id="get">GET</button></td>
+                <td><button id="generate">GENRATE</button></td>
+                <td><button id="print">PrintBIll</button></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div class="bill_generate">
+        <table cellspacing="15px" >
+            <thead>
+                <td>BILL NO</td>
+                <td>PRODUCT</td>
+                <td>QUANTITY</td>
+                <td>PREPRIZE</td>
+                <td>TOTAL</td>
+                <td>GST%</td>
+                <td>DISCOUNT</td>
+                <td>GRAND TOTAL</td>
+            </thead>
+            <tbody id="bill_print"></tbody>
+            <tbody>
+                <td colspan="7" class="amount">BILL AMOUNT:</td>
+                <td id="bill-amount"></td>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
